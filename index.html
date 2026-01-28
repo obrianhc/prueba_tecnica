@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO App - Prueba Técnica</title>
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+  <div id="app" class="container mx-auto px-4 py-8 max-w-2xl">
+    <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">TODO App</h1>
+
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <div class="mb-4">
+        <form id="todo-form" class="flex gap-2">
+          <input type="text" id="todo-input" placeholder="Nueva tarea..."
+            class="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required>
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+            Agregar
+          </button>
+        </form>
+      </div>
+
+      <div class="flex justify-between items-center mb-4 text-sm text-gray-600">
+        <div class="space-x-2">
+          <button class="filter-btn font-bold text-blue-600" data-filter="all">Todas</button>
+          <button class="filter-btn hover:text-blue-600" data-filter="pending">Pendientes</button>
+          <button class="filter-btn hover:text-blue-600" data-filter="completed">Completadas</button>
+        </div>
+        <span id="task-count">0 tareas</span>
+      </div>
+
+      <ul id="todo-list" class="space-y-2">
+      </ul>
+    </div>
+  </div>
+
+  <div id="notification-area"></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

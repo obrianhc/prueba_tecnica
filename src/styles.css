@@ -1,0 +1,9 @@
+/* Basic styles */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+#notification-area {
+    position: relative;
+    z-index: 9999;
+}
